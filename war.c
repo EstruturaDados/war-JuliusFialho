@@ -82,7 +82,7 @@ int main() {
     // 1. Configuração Inicial (Setup):
     // - Define o locale para português.
     // - Inicializa a semente para geração de números aleatórios com base no tempo atual.
-    srand(time(0));
+    srand(time(NULL));
     // - Aloca a memória para o mapa do mundo e verifica se a alocação foi bem-sucedida.
     Territorio *mapa=alocarMapa();
     if(mapa==NULL){
