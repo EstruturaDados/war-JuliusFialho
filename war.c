@@ -155,7 +155,7 @@ int main() {
 
     // 3. Limpeza:
     // - Ao final do jogo, libera a memória alocada para o mapa para evitar vazamentos de memória.
-    printf("\nDigite qualquer tecla paa sair");
+    printf("\nDigite qualquer tecla para sair");
     liberarMemoria(mapa,*missaoJogador);
     getchar();
     return 0;
