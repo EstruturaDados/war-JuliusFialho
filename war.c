@@ -338,13 +338,13 @@ int sortearMissao(int i){
 // verificarVitoria():
 // Verifica se o jogador cumpriu os requisitos de sua missão atual.
 // Implementa a lógica para cada tipo de missão (destruir um exército ou conquistar um número de territórios).
-// Retorna 1 (verdadeiro) se a missão foi cumprida, e 0 (falso) caso contrário.
+// Retorna 1 (verdadeiro) se a missão foi cumprida e 0 (falso) caso contrário.
 int verificarVitoria(int indice,char *missoes[],Territorio *mapa ){
     
     
     
-    int contagem[MAX_TERRITORIO]={0,0,0,0,0}; // conta o numero de territotio de cada cor
-
+    int contagem[MAX_TERRITORIO]={0,0,0,0,0}; //variavel para contar o numero de territotio para cada cor
+    //conta o numero de terreno paara cada cor, contagem[0] guarda a quantidade de terrenos com a cor verde
     for(int i=0;i<MAX_TERRITORIO;i++)
         {
             if(strcmp("Verde",mapa[i].cor)==0){
@@ -375,9 +375,10 @@ int verificarVitoria(int indice,char *missoes[],Territorio *mapa ){
         
             
         
-   
+   //com base no id da missao é selecionada uma das duas forma de vencer
     if(indice>1){
-       printf("\n %d indice %d",indice,contagem[indice]);
+        //para as missões de conquista territorios com uma determinada cor
+      
        switch (indice)
        {
         case 2:
@@ -402,7 +403,7 @@ int verificarVitoria(int indice,char *missoes[],Territorio *mapa ){
        }
        
     }else{
-        printf("\nconquista varias vezes seguida");
+      // para missões de  conquistar varios terrenos
          switch (indice)
        {
         case 0:
